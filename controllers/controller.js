@@ -66,7 +66,7 @@ exports.addInstitute = async (req , res ) =>{
       exma_id
         } = req.body ;
 
-
+        
      const insertData = `INSERT INTO "Institute_registration".institue_registrations
 ( ragistration_name, institute_id, board_id, medium, class_category_id, standers, subject,colleges_id,degree_id,exma_id)
 VALUES($1, $2, $3, $4, $5, $6, $7,$8, $9, $10);`;
@@ -88,7 +88,7 @@ VALUES($1, $2, $3, $4, $5, $6, $7,$8, $9, $10);`;
 
     } catch (error) {
         console.log('error :>> ', error);
-        res.json(500).json(error)
+        res.json(500).json({error : "Institute data not rgistation"})
     }
 }
 
