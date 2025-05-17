@@ -1,0 +1,14 @@
+curl --location 'http://localhost:3000/api/addInstitute' \
+--header 'Content-Type: application/json' \
+--data '{
+    "ragistration_name": "Test School" ,
+      "institute_id" : 2,
+      "board_id": 1,
+      "medium" : 1,
+      "class_category_id": 4,
+      "standers" : ["9th","10th"],
+      "subject" : ["Math","Science"],
+      "collage_id": null,
+      "degree_id": null,
+      "exma_id": null
+}'
