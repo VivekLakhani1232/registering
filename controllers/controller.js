@@ -1,5 +1,6 @@
 const pool = require('../helpers/helper')
 
+// get list of institute
 exports.getInstitute = async (req, res ) => {
 try {
     let getData = await pool.query(`select * from "Institute_registration".institute_type it ;`);
@@ -10,6 +11,7 @@ try {
 }
 }
 
+// This api use fot school DropDwone
 exports.getDropdwonForSchool = async (req , res ) =>{
     try {
         let getDropDwon = await pool.query(`
@@ -51,6 +53,7 @@ res.status(200).json({dropDwonForSchool : getDropDwon.rows})
     }
 }
 
+// Main api for Institute registration
 exports.addInstitute = async (req , res ) =>{
     try {
         const 
